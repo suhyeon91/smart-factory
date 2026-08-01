@@ -1,0 +1,31 @@
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #e2e8f0;
+  background-color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #94a3b8;
+}
