@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4a4a4a" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="url(#grid)"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#555" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="600" fill="#2b2b2b"/>
+  <rect width="800" height="600" fill="url(#gridMajor)"/>
+
+  <rect x="16" y="16" width="768" height="568" fill="none" stroke="#6b7280" stroke-width="4"/>
+
+  <rect x="40" y="40" width="420" height="280" fill="#333" stroke="#64748b" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="250" y="68" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Machining Zone A</text>
+
+  <rect x="480" y="40" width="280" height="200" fill="#333" stroke="#64748b" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="620" y="68" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Machining Zone B</text>
+
+  <rect x="40" y="340" width="520" height="120" fill="#2f3339" stroke="#64748b" stroke-width="2"/>
+  <text x="300" y="368" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Assembly Line</text>
+  <line x1="60" y1="400" x2="540" y2="400" stroke="#475569" stroke-width="3" stroke-dasharray="12 6"/>
+
+  <rect x="480" y="260" width="280" height="200" fill="#2a2e34" stroke="#64748b" stroke-width="2"/>
+  <text x="620" y="288" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Storage</text>
+  <rect x="510" y="310" width="50" height="40" fill="#404550" stroke="#64748b" stroke-width="1"/>
+  <rect x="570" y="310" width="50" height="40" fill="#404550" stroke="#64748b" stroke-width="1"/>
+  <rect x="630" y="310" width="50" height="40" fill="#404550" stroke="#64748b" stroke-width="1"/>
+  <rect x="690" y="310" width="50" height="40" fill="#404550" stroke="#64748b" stroke-width="1"/>
+
+  <rect x="580" y="480" width="180" height="80" fill="#2f3339" stroke="#64748b" stroke-width="2"/>
+  <text x="670" y="528" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Shipping</text>
+
+  <path d="M 40 480 L 560 480 L 560 540 L 40 540 Z" fill="#383c44" stroke="#475569" stroke-width="1.5"/>
+  <text x="300" y="518" fill="#64748b" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">AGV Lane</text>
+  <line x1="80" y1="510" x2="520" y2="510" stroke="#fbbf24" stroke-width="2" stroke-dasharray="16 10" opacity="0.5"/>
+
+  <rect x="80" y="100" width="64" height="64" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <rect x="180" y="100" width="64" height="64" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <rect x="280" y="100" width="64" height="64" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <rect x="380" y="100" width="64" height="64" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <rect x="520" y="100" width="64" height="64" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+</svg>
