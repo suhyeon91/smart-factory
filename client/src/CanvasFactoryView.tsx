@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
-import { io } from 'socket.io-client';
+import { useEffect, useRef } from 'react';
 import type { Device } from './types/device';
 
 const FACTORY_FLOOR_URL = '/assets/factory-floor.svg';
 const MCT_URL = '/assets/mct.svg';
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL ?? window.location.origin;
 
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 600;
@@ -45,9 +43,12 @@ function loadImage(src: string): Promise<HTMLImageElement> {
   });
 }
 
-export default function CanvasFactoryView() {
+interface CanvasFactoryViewProps {
+  devices: Device[];
+}
+
+export default function CanvasFactoryView({ devices }: CanvasFactoryViewProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [devices, setDevices] = useState<Device[]>([]);
   const devicesRef = useRef(devices);
   const imagesRef = useRef<{ floor: HTMLImageElement | null; mct: HTMLImageElement | null }>({
     floor: null,
@@ -55,18 +56,6 @@ export default function CanvasFactoryView() {
   });
 
   devicesRef.current = devices;
-
-  useEffect(() => {
-    const socket = io(SOCKET_URL);
-
-    socket.on('device-update', (updatedDevices: Device[]) => {
-      setDevices(updatedDevices);
-    });
-
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -141,11 +130,5 @@ export default function CanvasFactoryView() {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      width={CANVAS_WIDTH}
-      height={CANVAS_HEIGHT}
-    />
-  );
+  return <canvas ref={canvasRef} width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />;
 }
