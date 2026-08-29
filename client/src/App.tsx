@@ -7,6 +7,7 @@ import TopNav from './TopNav';
 
 const SOCKET_URL = import.meta.env.VITE_SOCKET_URL ?? window.location.origin;
 
+console.log('SOCKET_URL:', SOCKET_URL);
 type Tab = 'canvas' | 'stats';
 
 function App() {
