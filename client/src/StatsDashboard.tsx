@@ -28,12 +28,6 @@ function batteryColor(battery: number): string {
   return COLORS.red;
 }
 
-function tempStatusColor(status: string): string {
-  if (status === 'warning') return COLORS.orange;
-  if ((status as string) === 'error') return COLORS.red;
-  return COLORS.green;
-}
-
 const cardStyle: React.CSSProperties = {
   background: 'linear-gradient(155deg, #1a2233 0%, #0d1420 100%)',
   borderRadius: '16px',
